@@ -16,7 +16,7 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                bat 'pytest'
+                bat 'pytest --html=report.html'
             }
         }
 
