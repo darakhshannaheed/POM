@@ -19,5 +19,11 @@ pipeline {
                 bat 'pytest'
             }
         }
+
+        stage('Archive Artifacts') {
+            steps {
+                archiveArtifacts artifacts: '*.html', fingerprint: true
+            }
+        }
     }
 }
